@@ -2,6 +2,7 @@ body {
     background-color: rgb(8, 5, 12);
     color: rgba(246, 246, 246, 1);
     font-family: 'Montserrat', sans-serif;
+    display: flexbox;
     
 }
 
