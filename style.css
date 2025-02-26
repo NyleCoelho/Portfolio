@@ -1,17 +1,24 @@
+* {
+    margin: 0%;
+    padding: 0cap;
+}
+
 body {
     background-color: rgb(8, 5, 12);
     color: rgba(246, 246, 246, 1);
     font-family: 'Montserrat', sans-serif;
-    display: flexbox;
-    
 }
 
-h1 {
+.tituloBlog {
     font-family: 'Krona One', sans-serif;
 }
 
-strong {
+.destaqueTitulo {
     color: rgba(181, 121, 255, 1);
+}
+
+.destaqueParagrafo {
+    color: aquamarine;
 }
 
 a {
