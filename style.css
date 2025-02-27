@@ -6,10 +6,7 @@
 .apresentacao {
     display: flex;
     align-items: center;
-}
-
-.apresentacao__conteudo {
-    
+    flex-direction: row;
 }
 
 body {
