@@ -3,6 +3,15 @@
     padding: 0cap;
 }
 
+.apresentacao {
+    display: flex;
+    align-items: center;
+}
+
+.apresentacao__conteudo {
+    
+}
+
 body {
     height: 100vh;
     box-sizing: border-box;
