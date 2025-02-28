@@ -61,5 +61,14 @@ body {
     color: #e372ff;
 }
 
+.cabecalho {
+    padding: 30px;
+    display: flex;
+    justify-content: flex-end;
+    background-color: aqua;
+}
 
-
+.cabecalho__menu {
+    display: flex;
+    justify-content: space-between;
+}
