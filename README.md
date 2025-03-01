@@ -43,5 +43,5 @@ O objetivo deste projeto é criar uma página de portfólio pessoal utilizando *
 
 ## 👥 Autores
 
-Desenvolvido por Nyle Coelho (https://github.com/seu-usuario) durante os estudos na Alura & Oracle Innovation One.
+Desenvolvido por Nyle Coelho (https://github.com/NyleCoelho) durante os estudos na Alura & Oracle Innovation One.
 
