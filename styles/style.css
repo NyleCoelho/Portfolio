@@ -1,4 +1,8 @@
-
+:root {
+    --cor-primaria: rgb(8, 5, 12);
+    --cor-secundaria: rgb(255, 255, 255);
+    --cor-terciaria: rgba(181, 121, 255, 1);
+}
 
 * {
     margin: 0%;
@@ -9,8 +13,8 @@
 body {
     height: 100vh;
     box-sizing: border-box;
-    background-color: rgb(8, 5, 12);
-    color: rgba(246, 246, 246, 1);
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
 }
 
 .apresentacao {
@@ -48,14 +52,14 @@ body {
     justify-content: center;
     gap: 16px;
     align-items: center;
-    background-color: rgba(181, 121, 255, 1);
+    background-color: var(--cor-terciaria);
     width: 280px;
     text-align: center;
     border-radius: 16px;
     font-size: 24px;
     padding: 21.5px 0;
     text-decoration: none;
-    color: black;
+    color: var(--cor-primaria);
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
 }
@@ -67,11 +71,11 @@ body {
 
 
 .destaqueTitulo {
-    color: rgba(181, 121, 255, 1);
+    color: var(--cor-terciaria);
 }
 
 .destaqueParagrafo {
-    color: #e372ff;
+    color: var(--cor-terciaria);
 }
 
 .cabecalho {
@@ -91,13 +95,13 @@ body {
 }
 
 .item_menu {
-    color: rgb(11, 0, 26);
+    color: var(--cor-primaria);
     font-size: 25px;
 }
 
 .logotipo {
     font-family: 'Krona One', sans-serif;
-    color: black;
+    color: var(--cor-primaria);
 }
 
 .logos {
