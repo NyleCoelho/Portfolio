@@ -1,7 +1,16 @@
+
+
 * {
     margin: 0%;
     padding: 0cap;
     text-decoration: none;
+}
+
+body {
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: rgb(8, 5, 12);
+    color: rgba(246, 246, 246, 1);
 }
 
 .apresentacao {
@@ -55,12 +64,7 @@
     background: linear-gradient(90deg, #9b70ff 0%, #d262ee 50%, #8361fd 100%);
 }
 
-body {
-    height: 100vh;
-    box-sizing: border-box;
-    background-color: rgb(8, 5, 12);
-    color: rgba(246, 246, 246, 1);
-}
+
 
 .destaqueTitulo {
     color: rgba(181, 121, 255, 1);
