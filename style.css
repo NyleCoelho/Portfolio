@@ -75,7 +75,7 @@ body {
     padding: 30px 70px;
     display: flex;
     justify-content: space-between;
-    background-color: rgb(27, 19, 37);
+    background: linear-gradient(rgba(181, 121, 255, 1), rgb(221, 87, 255));
 }
 
 .cabecalho__menu {
@@ -88,15 +88,20 @@ body {
 }
 
 .item_menu {
-    color: rgba(181, 121, 255, 1);
+    color: rgb(11, 0, 26);
 }
 
 .logotipo {
     font-family: 'Krona One', sans-serif;
+    color: black;
 }
 
 .logos {
     width: 40px;
     align-items: center;
-    
+}
+
+.rodape {
+    display: flex;
+    justify-content: center;
 }
