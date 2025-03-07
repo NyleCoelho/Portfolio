@@ -53,7 +53,6 @@
 
 .apresentacao__links__link:hover {
     background: linear-gradient(90deg, #9b70ff 0%, #d262ee 50%, #8361fd 100%);
-
 }
 
 body {
@@ -89,6 +88,7 @@ body {
 
 .item_menu {
     color: rgb(11, 0, 26);
+    font-size: 25px;
 }
 
 .logotipo {
