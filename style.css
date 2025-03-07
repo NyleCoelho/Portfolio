@@ -52,7 +52,8 @@
 }
 
 .apresentacao__links__link:hover {
-    background-color: rgb(200, 153, 255);
+    background: linear-gradient(90deg, #9b70ff 0%, #d262ee 50%, #8361fd 100%);
+
 }
 
 body {
