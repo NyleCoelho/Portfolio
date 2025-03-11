@@ -23,11 +23,12 @@ body {
     align-items: center;
     justify-content: space-between;
     margin: 10% 16%;
+    gap: 3rem;
 
 }
 
 .apresentacao__conteudo {
-    width: 615px;
+    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -55,7 +56,7 @@ body {
     margin-right: 1rem;
     align-items: center;
     background-color: var(--cor-terciaria);
-    width: 280px;
+    width: 50%;
     text-align: center;
     border-radius: 16px;
     font-size: 1.5rem;
@@ -116,5 +117,21 @@ body {
 }
 
 .Foto-Bianca {
-    margin-left: 2rem;
+    width: 50%;
+}
+
+@media (max-width: 1200px) {
+
+    .cabecalho {
+        padding: 10%;
+    }
+
+    .cabecalho__menu {
+        justify-content: center;
+    }
+
+    .apresentacao {
+        flex-direction: column-reverse;
+    }
+
 }
