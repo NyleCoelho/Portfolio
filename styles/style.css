@@ -51,7 +51,8 @@ body {
 .apresentacao__links__link {
     display: flex;
     justify-content: center;
-    gap: 16px;
+    gap: 2rem;
+    margin-right: 1rem;
     align-items: center;
     background-color: var(--cor-terciaria);
     width: 280px;
@@ -68,7 +69,6 @@ body {
 .apresentacao__links__link:hover {
     background: linear-gradient(90deg, var(--cor-terciaria), var(--cor-quaternaria), var(--cor-terciaria));
 }
-
 
 
 .destaqueTitulo {
@@ -113,4 +113,8 @@ body {
 .rodape {
     display: flex;
     justify-content: center;
+}
+
+.Foto-Bianca {
+    margin-left: 2rem;
 }
