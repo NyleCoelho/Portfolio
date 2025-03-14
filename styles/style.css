@@ -1,5 +1,5 @@
 :root {
-    --cor-primaria: rgb(32, 21, 32);
+    --cor-primaria: rgb(9, 8, 14);
     --cor-secundaria: rgb(245, 220, 255);
     --cor-terciaria: #ff8dec;
     --cor-quaternaria: rgb(242, 185, 255);
@@ -24,7 +24,6 @@ body {
     justify-content: space-between;
     margin: 10% 16%;
     gap: 3rem;
-    
 
 }
 
@@ -89,10 +88,11 @@ body {
 
 .cabecalho__menu {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     gap: 100px;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
+    font-weight: 600;
     
 }
 
