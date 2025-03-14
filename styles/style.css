@@ -83,21 +83,20 @@ body {
 .cabecalho {
     padding: 30px 70px;
     display: flex;
-    justify-content: space-between;
-    background: linear-gradient(var(--cor-terciaria), var(--cor-quaternaria));
+    justify-content: center;
 }
 
 .cabecalho__menu {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     gap: 100px;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
+    font-weight: 400;
+    
 }
 
 .item_menu {
-    color: var(--cor-primaria);
+    color: var(--cor-secundaria);
     font-size: 1.5rem;
 }
 
