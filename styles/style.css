@@ -143,3 +143,15 @@ body {
         width: auto;
     }
 }
+
+.SobreMim {
+    background-color: aqua;
+}
+
+.Projetos {
+    background-color: blueviolet;
+}
+
+.Contato {
+    background-color:chartreuse;
+}
