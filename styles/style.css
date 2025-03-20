@@ -146,6 +146,11 @@ body {
 
 .SobreMim {
     background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    
 }
 
 .Projetos {
