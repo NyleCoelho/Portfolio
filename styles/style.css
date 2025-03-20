@@ -1,8 +1,8 @@
 :root {
-    --cor-primaria: rgb(9, 8, 14);
-    --cor-secundaria: rgb(245, 220, 255);
-    --cor-terciaria: #ff8dec;
-    --cor-quaternaria: rgb(242, 185, 255);
+    --cor-primaria: rgb(251, 228, 214);
+    --cor-secundaria: rgb(67, 33, 71);
+    --cor-terciaria: #a15895;
+    --cor-quaternaria: rgb(95, 60, 104);
 } 
 
 * {
