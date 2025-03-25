@@ -98,7 +98,7 @@ body {
 .menu__item {
     color: var(--cor-secundaria);
     font-size: 1.5rem;
-    transition: transform 0.4s ease-in-out;
+    transition: transform 0.2s ease-in-out;
 }
 
 .menu__item:hover {
