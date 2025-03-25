@@ -14,7 +14,8 @@
 body {
     height: 100vh;
     box-sizing: border-box;
-    background-color: var(--cor-primaria);
+    background: radial-gradient(circle at center, #002fff, #c5fe7b);
+    transition: background 0.1s linear;
     color: var(--cor-secundaria);
 }
 
@@ -37,7 +38,7 @@ body {
 .apresentacao__conteudo__titulo {
     font-family: "PT Serif", serif;;
     font-size: 3.90rem;
-    line-height: 120%;
+    line-height: 100%;
 }
 
 .apresentacao__conteudo__texto {
@@ -77,7 +78,7 @@ body {
 .destaqueTitulo {
     color: var(--cor-terciaria);
     font-family: 'Montserrat', sans-serif;
-    font-size: 4.24rem;
+    font-size: 3.84rem;
 
 }
 
@@ -147,42 +148,4 @@ body {
     .Foto-Bianca {
         width: auto;
     }
-}
-
-.SobreMim {
-    background-color: rgb(237, 191, 243);
-    display: flex;
-    justify-content: center;
-    margin: 0% 0%;
-    gap: 3rem
-}
-
-.textoSobre {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    align-items: center;
-    padding-top: 50rem;
-    padding-bottom: 50rem;
-}
-
-.sobreTitulo {
-    font-family: 'Krona One', sans-serif;
-    font-size: 2.25rem;
-}
-
-.sobreParagrafo {
-    font-size: 1.5rem;
-    font-family: 'Montserrat', sans-serif;
-    text-align: center;
-}
-
-
-.Projetos {
-    background-color: blueviolet;
-}
-
-.Contato {
-    background-color:chartreuse;
 }
