@@ -25,6 +25,7 @@ body {
     justify-content: space-between;
     margin: 10% 16%;
     gap: 3rem;
+    height: 50vh;
 
 }
 
@@ -117,11 +118,6 @@ body {
 .logos {
     width: 40px;
     align-items: center;
-}
-
-.rodape {
-    display: flex;
-    justify-content: center;
 }
 
 .Foto-Bianca {
