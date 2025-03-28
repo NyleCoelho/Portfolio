@@ -22,7 +22,7 @@ body {
 .conteudo {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     margin: 10% 16%;
     gap: 3rem;
     height: 50vh;
@@ -44,7 +44,7 @@ body {
 .descricao {
     font-size: 1.5rem;
     font-family: 'Montserrat', sans-serif;
-    text-align: justify;
+    text-align: center;
     margin: 5% 0;
 }
 
