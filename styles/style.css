@@ -1,8 +1,8 @@
 :root {
     --cor-primaria: rgb(215, 214, 251);
-    --cor-secundaria: rgb(237, 231, 255);
-    --cor-terciaria: #cd8ceb;
-    --cor-quaternaria: rgb(139, 87, 199);
+    --cor-secundaria: rgb(230, 230, 230);
+    --cor-terciaria: rgb(159, 86, 255);
+    --cor-quaternaria: rgb(87, 199, 96);
 } 
 
 * {
@@ -14,7 +14,7 @@
 body {
     height: 100vh;
     box-sizing: border-box;
-    background: radial-gradient(circle at right, #1e012e, #000000);
+    background: radial-gradient(circle at right, #111116, #111116);
     transition: background 0.1s linear;
     color: var(--cor-secundaria);
 }
@@ -48,7 +48,7 @@ body {
 }
 
 .descricao {
-    font-size: 1.5rem;
+    font-size: 1.6vw;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     margin: 5% 0;
@@ -81,7 +81,9 @@ body {
 }
 
 .destaque {
-    color: var(--cor-terciaria);
+    background: linear-gradient(45deg, rgb(181, 135, 255), rgb(158, 131, 255), rgb(155, 100, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-family: 'Montserrat', sans-serif;
     font-size: 3.84vw;
 }
@@ -121,6 +123,71 @@ body {
     width: 50%;
 }
 
+.cat {
+    width: 120px;
+    height: 120px;
+    background: #333;
+    border-radius: 50%;
+    position: relative;
+}
+
+/* Orelhas */
+.ear {
+    width: 40px;
+    height: 40px;
+    background: #333;
+    position: absolute;
+    top: -20px;
+    border-radius: 50%;
+}
+
+.ear.left { left: -10px; transform: rotate(-20deg); }
+.ear.right { right: -10px; transform: rotate(20deg); }
+
+/* Olhos */
+.eye {
+    width: 30px;
+    height: 30px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 40px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.eye.left { left: 25px; }
+.eye.right { right: 25px; }
+
+/* Pupilas */
+.pupil {
+    width: 10px;
+    height: 10px;
+    background: black;
+    border-radius: 50%;
+    position: relative;
+    transition: transform 0.1s linear;
+}
+
+/* Nariz */
+.nose {
+    width: 12px;
+    height: 10px;
+    background: pink;
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+}
+
+/* Olhos seguindo o mouse */
+body:hover .pupil {
+    transform: translate(var(--x, 0px), var(--y, 0px));
+}
+
 @media (max-width: 1200px) {
     .cabecalho {
         padding: 10%;
@@ -139,3 +206,4 @@ body {
         width: auto;
     }
 }
+
