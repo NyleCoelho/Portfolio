@@ -31,14 +31,20 @@ body {
 .texto {
     width: 50%;
     display: flex;
+    justify-content: center; 
+    width: 100%; 
+    text-align: center;
     flex-direction: column;
     gap: 40px;
 }
 
 .titulo {
     font-family: "PT Serif", serif;
-    font-size: 3.9rem;
+    font-size: 5vw;
     line-height: 100%;
+    text-align: center;
+    white-space: nowrap;
+
 }
 
 .descricao {
@@ -77,7 +83,7 @@ body {
 .destaque {
     color: var(--cor-terciaria);
     font-family: 'Montserrat', sans-serif;
-    font-size: 3.84rem;
+    font-size: 3.84vw;
 }
 
 .cabecalho {
@@ -126,7 +132,7 @@ body {
         flex-direction: column-reverse;
         padding: 5%;
     }
-    .texto {
+    .titulo {
         width: auto;
     }
     .foto {
