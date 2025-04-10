@@ -62,9 +62,6 @@ body {
 .link {
     display: flex;
     justify-content: center;
-    gap: 2rem;
-    margin-right: 1rem;
-    align-items: center;
     width: 50%;
     text-align: center;
     border-radius: 40px;
@@ -73,13 +70,11 @@ body {
     color: rgb(255, 255, 255);
     font-family: 'Montserrat', sans-serif;
     border: 2px solid;
-    border-color: rgb(147, 32, 255);
+    border-color:#E563FF;
 }
 
 .destaque {
-    background: linear-gradient(45deg, rgb(181, 135, 255), rgb(158, 131, 255), rgb(155, 100, 255));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #E563FF;
     font-family: 'Montserrat', sans-serif;
     font-size: 5vw;
 }
