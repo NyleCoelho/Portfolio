@@ -39,7 +39,7 @@ body {
 
 .titulo {
     font-family: "PT Serif", serif;
-    font-size: 5vw;
+    font-size: 6vw;
     line-height: 100%;
     text-align: center;
     white-space: nowrap;
@@ -55,7 +55,8 @@ body {
 
 .links {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+
 }
 
 .link {
@@ -64,19 +65,15 @@ body {
     gap: 2rem;
     margin-right: 1rem;
     align-items: center;
-    background-color: var(--cor-terciaria);
     width: 50%;
     text-align: center;
-    border-radius: 16px;
+    border-radius: 40px;
     font-size: 1.5rem;
     padding: 21.5px 0;
-    color: black;
+    color: rgb(255, 255, 255);
     font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-}
-
-.link:hover {
-    background: linear-gradient(90deg, var(--cor-terciaria), var(--cor-quaternaria), var(--cor-terciaria));
+    border: 2px solid;
+    border-color: rgb(147, 32, 255);
 }
 
 .destaque {
@@ -84,7 +81,7 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: 'Montserrat', sans-serif;
-    font-size: 3.84vw;
+    font-size: 5vw;
 }
 
 .cabecalho {
