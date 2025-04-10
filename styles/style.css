@@ -43,6 +43,7 @@ body {
     line-height: 100%;
     text-align: center;
     white-space: nowrap;
+    background-color: chartreuse;
 
 }
 
@@ -77,6 +78,7 @@ body {
     color: #E563FF;
     font-family: 'Montserrat', sans-serif;
     font-size: 5vw;
+
 }
 
 .cabecalho {
@@ -133,14 +135,22 @@ body {
 
 .sobremim {
     display: flex;
+    flex-direction: row;   /* garante que fique lado a lado */
+    align-items: center;
     justify-content: space-between;
-}
-
-.conteudo {
-
-    
-}
-
-.imagem {
-
-}
+    padding: 20px;
+    gap: 20px;
+  }
+  
+  .conteudo {
+    width: 50%; /* cada um ocupa metade do main */
+    box-sizing: border-box;
+  }
+  
+  .imagem {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  
