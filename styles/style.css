@@ -22,28 +22,24 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 10% 16%;
+    margin: 10% 25%;
     gap: 3rem;
     height: 50vh;
 }
 
 .texto {
-    width: 50%;
+    width: 100%;
     display: flex;
     justify-content: center; 
-    width: 100%; 
     text-align: center;
     flex-direction: column;
-    gap: 40px;
 }
 
 .titulo {
     font-family: "PT Serif", serif;
-    font-size: 6vw;
+    font-size: 5vw;
     line-height: 100%;
     text-align: center;
-    white-space: nowrap;
-    background-color: chartreuse;
 
 }
 
