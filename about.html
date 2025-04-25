@@ -1,40 +1,51 @@
 <!DOCTYPE html>
-<html lang="PT-BR">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./styles/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conheça Bianca Coelho, estudante de Engenharia de Software">
+    <title>Sobre mim | Bianca Coelho</title>
+    
+    <!-- Preload para recursos críticos -->
+    <link rel="preload" href="./styles/style.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700&display=swap" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@1,700&display=swap" as="style">
+    
+    <!-- CSS -->
     <link rel="stylesheet" href="./styles/style.css">
+    
+    <!-- Fontes -->
     <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@1,700&display=swap" rel="stylesheet">
-    <title>Sobre mim</title>
-
 </head>
+
 <body>
     <header class="cabecalho">
-        <nav class="menu">
-            <a class="menu__item" href="">Projetos</a>
-            <a class="menu__item" href="about.html">Sobre mim</a>
-            <a class="menu__item" href="">Formação</a>
-            <a class="menu__item" href="">Contato</a>
+        <nav class="menu" aria-label="Navegação principal">
+            <ul class="menu__lista">
+                <li class="menu__item"><a href="index.html">Projetos</a></li>
+                <li class="menu__item"><a href="about.html" aria-current="page">Sobre mim</a></li>
+                <li class="menu__item"><a href="formacao.html">Formação</a></li>
+                <li class="menu__item"><a href="contato.html">Contato</a></li>
+            </ul>
         </nav>
     </header>
 
-    <main class="sobremim">
-        <section class="conteudo__sobremim">
-            <div class="texto__sobremim">
-            <h1 class="titulo__sobremim">Mas afinal... <br> <strong class="destaque">Quem sou eu?</strong></h1>
-            <p class="descricao__sobremim">
-                Sou Bianca Coelho, estudante de Engenharia de Software de Porto Velho, Rondônia. Apaixonada por tecnologia, estou sempre em busca de novos desafios e pronta para aprender e crescer. Estou disponível para trabalhos remotos, com foco em entregar resultados inovadores e de qualidade. Se você procura alguém comprometida e disposta a contribuir, estou pronta para colaborar!
-            </p>        
+    <main class="conteudo-principal">
+        <section class="sobre-mim">
+            <div class="sobre-mim__conteudo">
+                <h1 class="sobre-mim__titulo">Mas afinal... <br><strong class="destaque">Quem sou eu?</strong></h1>
+                <p class="sobre-mim__descricao">
+                    Sou Bianca Coelho, estudante de Engenharia de Software de Porto Velho, Rondônia. Apaixonada por tecnologia, estou sempre em busca de novos desafios e pronta para aprender e crescer. Estou disponível para trabalhos remotos, com foco em entregar resultados inovadores e de qualidade. Se você procura alguém comprometida e disposta a contribuir, estou pronta para colaborar!
+                </p>        
             </div>
         </section>
 
-        <section class="imagem">
-            <img src="assets/imagem.png">
+        <section class="sobre-mim__imagem">
+            <img src="assets/imagem.png" alt="Bianca Coelho" width="500" height="500" loading="lazy">
         </section>
     </main>
-
 </body>
 </html>

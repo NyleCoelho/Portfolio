@@ -99,14 +99,14 @@ body {
 
 .titulo {
     font-family: var(--fonte-titulo);
-    font-size: clamp(2rem, 5vw, 4rem);
+    font-size: clamp(3rem, 5vw, 4rem);
     line-height: 1;
 }
 
 .destaque {
     color: var(--cor-quaternaria);
     font-family: var(--fonte-texto);
-    font-size: clamp(2rem, 5vw, 4rem);
+    font-size: clamp(2.5rem, 5vw, 4rem);
 }
 
 .descricao {
