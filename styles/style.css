@@ -2,7 +2,7 @@
     --cor-primaria: rgb(215, 214, 251);
     --cor-secundaria: rgb(230, 230, 230);
     --cor-terciaria: rgb(159, 86, 255);
-    --cor-quaternaria: rgb(222, 56, 255);
+    --cor-quaternaria: rgb(227, 87, 255);
     
     --fonte-titulo: "PT Serif", serif;
     --fonte-texto: 'Montserrat', sans-serif;
@@ -33,6 +33,11 @@ body {
     line-height: 1.6;
     display: flex;
     flex-direction: column;
+
+    background: 
+    radial-gradient(circle at 70% 30%, rgba(215, 55, 255, 0.1) 0%, transparent 30%),
+    radial-gradient(circle at 30% 70%, rgba(222, 56, 255, 0.1) 0%, transparent 30%),
+    #07060c;
 }
 
 /* Acessibilidade */
@@ -101,7 +106,34 @@ body {
     font-family: var(--fonte-titulo);
     font-size: clamp(3rem, 5vw, 4rem);
     line-height: 1;
+    position: relative;
+    animation: neon-pulse 3s ease infinite alternate;
 }
+
+.titulo::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 105%;
+    left: 0;
+    color: transparent;
+    background: linear-gradient(to top, 
+      rgba(229, 99, 255, 0.3) 0%, 
+      transparent 80%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    transform: scaleY(-1) skewX(-20deg);
+    opacity: 0.7;
+    filter: blur(1px);
+  }
+  
+  @keyframes neon-pulse {
+    0% { 
+      text-shadow: 0 0 5px #cc00ff, 0 0 10px var(--cor-terciaria);
+    }
+    100% { 
+      text-shadow: 0 0 10px #380035, 0 0 20px var(--cor-terciaria), 0 0 30px var(--cor-quaternaria);
+    }
+  }
 
 .destaque {
     color: var(--cor-quaternaria);
@@ -116,7 +148,7 @@ body {
 
 /* Links */
 .links {
-    width: 100%;
+    width: 80%;
     display: flex;
     justify-content: center;
 }
