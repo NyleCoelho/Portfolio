@@ -1,48 +1,56 @@
 <!DOCTYPE html>
-<html lang="PT-BR">
-    
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de desenvolvimento de software">
+    <title>Portfólio | Desenvolvedor</title>
+    
+    <!-- Preload para fontes críticas -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700&display=swap" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@1,700&display=swap" as="style">
+    
+    <!-- CSS -->
     <link rel="stylesheet" href="./styles/style.css">
+    
+    <!-- Fontes -->
     <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@1,700&display=swap" rel="stylesheet">
-    <title>Portfólio</title>
 </head>
 
 <body>
-
-
     <header class="cabecalho">
-        <nav class="menu">
-            <a class="menu__item" href="projetos.html">Projetos</a>
-            <a class="menu__item" href="about.html">Sobre mim</a>
-            <a class="menu__item" href="contato.html">Contato</a>
-            <a class="menu__item" href="curriculo.html">Curriculo</a>
+        <nav class="menu" aria-label="Navegação principal">
+            <ul class="menu__lista">
+                <li class="menu__item"><a href="projetos.html">Projetos</a></li>
+                <li class="menu__item"><a href="about.html">Sobre mim</a></li>
+                <li class="menu__item"><a href="contato.html">Contato</a></li>
+                <li class="menu__item"><a href="curriculo.html">Currículo</a></li>
+            </ul>
         </nav>
     </header>
 
-    <main class="content">
-    
+    <main class="content" role="main">
         <section class="conteudo">
-
             <div class="texto">
-                <h1 class="titulo">Codifique seu futuro: <br> <strong class="destaque">Seja a inovação.</strong></h1>
-                <p class="descricao">Explorando o universo do desenvolvimento de software com curiosidade, dedicação e a mentalidade certa para crescer. A cada projeto, um novo aprendizado; a cada desafio, uma oportunidade de evolução. </p>
+                <h1 class="titulo">Codifique seu futuro: <br><strong class="destaque">Seja a inovação.</strong></h1>
+                <p class="descricao">
+                    Explorando o universo do desenvolvimento de software com curiosidade, dedicação e a mentalidade certa para crescer. 
+                    A cada projeto, um novo aprendizado; a cada desafio, uma oportunidade de evolução.
+                </p>
 
                 <div class="links">
-                    <a class="link" href="contato.html"> 
+                    <a class="link" href="contato.html" aria-label="Entre em contato"> 
                         Vamos conversar?
                     </a>
                 </div>    
             </div>
-
         </section>
-
     </main>
     
-    <script src="app.js"></script>
+    <script src="app.js" defer></script>
 </body>
 </html>
