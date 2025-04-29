@@ -160,16 +160,16 @@ section {
     margin-bottom: 0; /* Remove espaçamento abaixo do título */
 }
 
-.hero-descricao {
-    font-size: clamp(1rem, 3.5vw, 1.25rem);
-    max-width: 80ch;
-    margin: 2.5rem auto 2rem; 
-}
-
 .destaque {
     color: var(--cor-quaternaria);
     font-family: var(--fonte-texto);
     margin-bottom: 0; 
+}
+
+.hero-descricao {
+    font-size: clamp(1rem, 3.5vw, 1.25rem);
+    max-width: 80ch;
+    margin: 2.5rem auto 2rem; 
 }
 
 .hero-links {
@@ -348,6 +348,20 @@ section {
 /* ---------------------------------------------------------------------------------------------------------- Seção Contato */
 .contact-section {
     background: var(--gradiente-fundo);
+}
+
+.contato_titulo {
+    font-family: var(--fonte-titulo);
+    font-size: clamp(4.5rem, 7vw, 4rem);
+    text-align: center;
+    line-height: 0.9;
+    margin-bottom: 0; 
+}
+
+.destaque_contato {
+    color: var(--cor-quaternaria);
+    font-family: var(--fonte-texto);
+    font-size: clamp(5.5rem, 7vw, 4rem);
 }
 
 .contact-content {
