@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfólio de desenvolvimento de software">
-    <title>Portfólio | Página Inicial</title>
+    <meta name="description" content="Portfólio de Bianca Coelho - Desenvolvedora de Software">
+    <title>Portfólio | Bianca Coelho</title>
     
     <!-- Preload para fontes críticas -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" as="style">
@@ -22,34 +22,117 @@
 </head>
 
 <body>
+    <!-- Menu de Navegação -->
     <header class="cabecalho">
         <nav class="menu" aria-label="Navegação principal">
             <ul class="menu__lista">
-                <li class="menu__item"><a href="projetos.html">Projetos</a></li>
-                <li class="menu__item"><a href="about.html">Sobre mim</a></li>
-                <li class="menu__item"><a href="contato.html">Contato</a></li>
-                <li class="menu__item"><a href="curriculo.html">Currículo</a></li>
+                <li class="menu__item"><a href="#projetos">Projetos</a></li>
+                <li class="menu__item"><a href="#sobre">Sobre mim</a></li>
+                <li class="menu__item"><a href="#contato">Contato</a></li>
+                <li class="menu__item"><a href="#formacao">Formação</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="content" role="main">
-        <section class="conteudo">
-            <div class="texto">
-                <h1 class="titulo">Codifique seu futuro: <br><strong class="destaque">Seja a inovação.</strong></h1>
-                <p class="descricao">
-                    Explorando o universo do desenvolvimento de software com curiosidade, dedicação e a mentalidade certa para crescer. 
-                    A cada projeto, um novo aprendizado; a cada desafio, uma oportunidade de evolução.
-                </p>
+    <!-- Seção Hero / Início -->
+    <section id="inicio" class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-titulo">Codifique seu futuro: <br><strong class="destaque">Seja a inovação.</strong></h1>
+            <p class="hero-descricao">
+                Explorando o universo do desenvolvimento de software com curiosidade, dedicação e a mentalidade certa para crescer. 
+                A cada projeto, um novo aprendizado; a cada desafio, uma oportunidade de evolução.
+            </p>
 
-                <div class="links">
-                    <a class="link" href="contato.html" aria-label="Entre em contato"> 
-                        Vamos conversar?
-                    </a>
-                </div>    
+            <div class="hero-links">
+                <a class="hero-link" href="#contato" aria-label="Entre em contato"> 
+                    Vamos conversar?
+                </a>
+            </div>    
+        </div>
+    </section>
+
+    <!-- Seção Sobre Mim -->
+    <section id="sobre" class="about-section">
+        <div class="about-content">
+            <div class="about-text">
+                <h1 class="about-titulo">Mas afinal... <br><strong class="destaque">Quem sou eu?</strong></h1>
+                <p class="about-descricao">
+                    Estagiária em Implantação de Software no grupo Sankhya e atualmente cursando bacharel em Engenharia de Software no Centro Universitário Internacional Uninter. Como criadora de conteúdo no Linkedin, abordo temas relacionados a estudos, evolução profissional e experiências pessoais relevantes. 
+                </p>        
             </div>
-        </section>
-    </main>
+            <div class="about-image">
+                <img src="assets/nylecoelho.png" alt="Bianca Coelho" width="500" height="500" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Formação -->
+    <section id="formacao" class="education-section">
+        <div class="education-content">
+            <h2 class="section-title">Formação Acadêmica</h2>
+            <div class="education-items">
+                <div class="education-item">
+                    <h3>Engenharia de Software</h3>
+                    <p class="institution">Centro Universitário Internacional Uninter</p>
+                    <p class="period">2023 - Presente</p>
+                </div>
+                <!-- Adicione mais itens de formação conforme necessário -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Projetos -->
+    <section id="projetos" class="projects-section">
+        <div class="projects-content">
+            <h2 class="section-title">Meus Projetos</h2>
+            <div class="projects-grid">
+                <!-- Exemplo de item de projeto -->
+                <div class="project-card">
+                    <h3 class="project-title">Nome do Projeto</h3>
+                    <p class="project-description">Descrição breve do projeto e tecnologias utilizadas.</p>
+                    <a href="#" class="project-link">Ver projeto</a>
+                </div>
+                <!-- Adicione mais cards de projetos conforme necessário -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contato" class="contact-section">
+        <div class="contact-content">
+            <h2 class="section-title">Entre em <strong class="destaque">contato!</strong></h2>
+            
+            <form class="contact-form" action="#" method="POST">
+                <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Enviar mensagem</button>
+            </form>
+            
+            <div class="social-links">
+                <!-- Adicione links para redes sociais -->
+                <a href="#" class="social-link" aria-label="LinkedIn">LinkedIn</a>
+                <a href="#" class="social-link" aria-label="GitHub">GitHub</a>
+                <a href="#" class="social-link" aria-label="E-mail">E-mail</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2023 Bianca Coelho. Todos os direitos reservados.</p>
+    </footer>
     
     <script src="app.js" defer></script>
 </body>
