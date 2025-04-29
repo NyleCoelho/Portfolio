@@ -169,7 +169,8 @@ section {
 .hero-descricao {
     font-size: clamp(1rem, 3.5vw, 1.25rem);
     max-width: 80ch;
-    margin: 2.5rem auto 2rem; 
+    margin: 2.5rem auto 2rem;
+    padding: 0 1rem; /* Adiciona um padding padrão para evitar texto colado */
 }
 
 .hero-links {
@@ -492,6 +493,21 @@ section {
     
     .hero-link {
         padding: 1.25rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-descricao {
+        font-size: clamp(0.875rem, 3vw, 1rem); /* Texto menor */
+        max-width: 90%; /* Largura mais estreita */
+        margin: 2rem 1.5rem; /* Margens laterais maiores */
+        padding: 0 0.75rem; /* Evita texto colado nas bordas */
+    }
+
+    .hero-link {
+        width: 90%;
+        max-width: 230px;
+        font-size: 0.9rem;
     }
 }
 
