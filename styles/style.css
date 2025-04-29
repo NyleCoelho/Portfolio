@@ -7,7 +7,7 @@
     --fonte-titulo: "PT Serif", serif;
     --fonte-texto: 'Montserrat', sans-serif;
     
-    --gradiente-fundo: radial-gradient(circle at right, #111116, #07060c);
+    --gradiente-fundo: radial-gradient(circle at right, #08080a, #07060c);
     --transicao-padrao: all 0.3s ease-in-out;
     
     /* Novas variáveis para responsividade */
@@ -42,10 +42,6 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
-    background: 
-        radial-gradient(circle at 70% 30%, rgba(215, 55, 255, 0.1) 0%, transparent 30%),
-        radial-gradient(circle at 30% 70%, rgba(222, 56, 255, 0.1) 0%, transparent 30%),
-        #07060c;
 }
 
 /* Camada da imagem */
@@ -120,7 +116,7 @@ body::after {
     outline: none;
 }
 
-/* Seções */
+/* ---------------------------------------------------------------------------------------------------------- Seções */
 section {
     padding: 6rem var(--padding-mobile);
     min-height: 100vh;
@@ -190,9 +186,9 @@ section {
     outline: none;
 }
 
-/* Seção Sobre Mim */
+/* ---------------------------------------------------------------------------------------------------------- Seção Sobre Mim */
 .about-section {
-    background: rgba(7, 6, 12, 0.9);
+    background: var(--gradiente-fundo);
 }
 
 .about-content {
@@ -245,7 +241,7 @@ section {
     transform: scale(1.03);
 }
 
-/* Seção Formação */
+/* ---------------------------------------------------------------------------------------------------------- Seção Formação */
 .education-section {
     background: var(--gradiente-fundo);
     text-align: center;
@@ -280,9 +276,9 @@ section {
     font-size: clamp(0.9rem, 3vw, 1rem);
 }
 
-/* Seção Projetos */
+/* ---------------------------------------------------------------------------------------------------------  Seção Projetos */
 .projects-section {
-    background: rgba(7, 6, 12, 0.9);
+    background: #08080a;
 }
 
 .projects-content {
@@ -336,7 +332,7 @@ section {
     color: var(--cor-quaternaria);
 }
 
-/* Seção Contato */
+/* ---------------------------------------------------------------------------------------------------------- Seção Contato */
 .contact-section {
     background: var(--gradiente-fundo);
 }
@@ -426,7 +422,7 @@ section {
     color: var(--cor-terciaria);
 }
 
-/* Rodapé */
+/* ---------------------------------------------------------------------------------------------------------- Rodapé */
 .footer {
     text-align: center;
     padding: var(--padding-tablet);
@@ -435,7 +431,7 @@ section {
     font-size: clamp(0.8rem, 3vw, 1rem);
 }
 
-/* Media Queries - Tablet */
+/* ---------------------------------------------------------------------------------------------------------- Media Queries - Tablet */
 @media (min-width: 768px) {
     .container {
         padding: 0 var(--padding-tablet);
