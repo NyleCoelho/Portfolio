@@ -1,10 +1,17 @@
+@font-face {
+    font-family: "Tex Gyre Italic Bold"; /* Nome que você vai usar no CSS */
+    src: url("../fonts/tex-gyre-termes.bold-italic.otf") format("opentype");
+    font-weight: normal; /* Ajuste se necessário (bold, 700, etc.) */
+    font-style: normal; /* Pode ser "italic" se for o caso */
+}
+
 :root {
     --cor-primaria: rgb(215, 214, 251);
     --cor-secundaria: rgb(230, 230, 230);
     --cor-terciaria: rgb(159, 86, 255);
     --cor-quaternaria: rgb(230, 131, 255);
     
-    --fonte-titulo: "PT Serif", serif;
+    --fonte-titulo: "Tex Gyre Italic Bold";
     --fonte-texto: 'Montserrat', sans-serif;
     
     --gradiente-fundo: radial-gradient(circle at right, #08080a, #07060c);
@@ -190,7 +197,7 @@ section {
     background-color: rgba(229, 99, 255, 0.1);
     transform: translateY(-3px);
     outline: none;
-
+}
 
 /* ---------------------------------------------------------------------------------------------------------- Seção Sobre Mim */
 .about-section {
