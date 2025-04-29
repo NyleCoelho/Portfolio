@@ -370,7 +370,7 @@ section {
     padding: 0.8rem;
     background: rgba(21, 20, 26, 0.6);
     border: 1px solid rgba(159, 86, 255, 0.3);
-    border-radius: 4px;
+    border-radius: 10px;
     color: var(--cor-secundaria);
     transition: var(--transicao-padrao);
     font-size: clamp(0.9rem, 3vw, 1rem);
@@ -393,7 +393,7 @@ section {
     background: var(--cor-terciaria);
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 25px;
     font-weight: 600;
     cursor: pointer;
     transition: var(--transicao-padrao);
