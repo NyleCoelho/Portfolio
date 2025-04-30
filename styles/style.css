@@ -239,7 +239,7 @@ section {
 .about-titulo {
     font-family: var(--fonte-titulo);
     font-size: clamp(2rem, 6vw, 3rem);
-    line-height: 1.2;
+    line-height: 0.9;
     margin-bottom: 1.5rem;
     text-align: center;
 }
@@ -248,6 +248,7 @@ section {
     font-size: clamp(1rem, 3.5vw, 1.1rem);
     line-height: 1.6;
     text-align: center;
+    margin-top: 2rem;
 }
 
 .about-image {
@@ -364,6 +365,9 @@ section {
 }
 
 /* ---------------------------------------------------------------------------------------------------------- Seção Contato */
+.contact-section {
+    background: var(--gradiente-fundo);
+}
 
 
 .contato_titulo {
