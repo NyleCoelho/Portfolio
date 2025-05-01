@@ -16,6 +16,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@1,700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 </head>
 
 <body>
@@ -152,6 +154,27 @@
                 <a href="mailto:biancacoelhoo05@gmail.com" class="social-link" aria-label="E-mail" target="_blank">E-mail</a>
             </div>
         </div>
+
+        <!-- Pop-up de sucesso -->
+<div id="successPopup" class="custom-popup">
+    <div class="popup-content">
+      <div class="popup-icon">✓</div>
+      <h3 class="popup-title">Mensagem Enviada!</h3>
+      <p class="popup-message">Obrigado pelo seu contato. Responderei em breve.</p>
+      <button class="popup-close-btn">OK</button>
+    </div>
+  </div>
+  
+  <!-- Pop-up de erro -->
+  <div id="errorPopup" class="custom-popup">
+    <div class="popup-content error">
+      <div class="popup-icon">!</div>
+      <h3 class="popup-title">Erro no Envio</h3>
+      <p class="popup-message">Houve um problema ao enviar sua mensagem. Tente novamente.</p>
+      <button class="popup-close-btn">Entendido</button>
+    </div>
+  </div>
+  
     </section>
 
     <footer class="footer">
