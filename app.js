@@ -71,3 +71,32 @@ function showSuccessPopup() {
         showErrorPopup(error.text);
       });
   });
+
+  const palavras = ["Desenvolvedora", "Gamer", "Leitora", "Curiosa"];
+let i = 0;
+let j = 0;
+let apagando = false;
+const span = document.getElementById("palavra");
+
+function digita() {
+  if (!apagando && j <= palavras[i].length) {
+    span.textContent = palavras[i].slice(0, j++);
+  } else if (apagando && j >= 0) {
+    span.textContent = palavras[i].slice(0, j--);
+  }
+
+  if (j === palavras[i].length + 1) {
+    apagando = true;
+    setTimeout(digita, 1000);
+    return;
+  }
+
+  if (j === 0 && apagando) {
+    apagando = false;
+    i = (i + 1) % palavras.length;
+  }
+
+  setTimeout(digita, apagando ? 40 : 100);
+}
+
+digita();
