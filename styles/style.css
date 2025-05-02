@@ -275,6 +275,37 @@ section {
     transform: scale(1.03);
 }
 
+progress[value] {
+    --color: var(--cor-terciaria); /* the progress color */
+    --background: var(--gradiente-fundo); /* the background color */
+  
+    border: #d754ff;
+    width: 200px;
+    margin: 0 10px;
+    border-radius: 10em;
+    background: var(--background);
+  }
+
+  progress[value]::-webkit-progress-bar {
+    border-radius: 10em;
+    background: var(--background);
+  }
+  progress[value]::-webkit-progress-value {
+    border-radius: 10em;
+    background: var(--color);
+  }
+  progress[value]::-moz-progress-bar {
+    border-radius: 10em;
+    background: var(--color);
+  }
+  
+  label {
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+    margin: 20px 0;
+  }
+
 /* ---------------------------------------------------------------------------------------------------------- Seção Formação */
 .education-section {
     background: var(--gradiente-fundo);
