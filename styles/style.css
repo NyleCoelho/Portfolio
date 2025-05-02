@@ -371,7 +371,6 @@ section {
     background: #08080A;
 }
 
-
 .contato_titulo {
     font-family: var(--fonte-titulo);
     font-size: clamp(4.5rem, 7vw, 4rem);
@@ -469,6 +468,15 @@ section {
 
 .social-link:hover {
     color: var(--cor-terciaria);
+}
+
+.imagem_ilustrativa {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+    order: -1;
+    padding-left: 5%;
 }
 
 
