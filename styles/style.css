@@ -275,36 +275,38 @@ section {
     transform: scale(1.03);
 }
 
-progress[value] {
-    --color: var(--cor-terciaria); /* the progress color */
-    --background: var(--gradiente-fundo); /* the background color */
-  
-    border: #d754ff;
-    width: 200px;
-    margin: 0 10px;
+.progress-container {
+    border: 4px solid #d754ff; /* cor da borda */
     border-radius: 10em;
-    background: var(--background);
+    padding: 3px; /* espaço para a borda não cobrir o conteúdo */
+    width: 200px;
+    background: var(--gradiente-fundo);
+    margin: 0 10px;
   }
-
+  
+  progress[value] {
+    width: 100%;
+    height: 20px;
+    border: none; /* remove comportamento padrão */
+    border-radius: 10em;
+    background: var(--gradiente-fundo);
+    display: block;
+  }
+  
   progress[value]::-webkit-progress-bar {
     border-radius: 10em;
-    background: var(--background);
-  }
-  progress[value]::-webkit-progress-value {
-    border-radius: 10em;
-    background: var(--color);
-  }
-  progress[value]::-moz-progress-bar {
-    border-radius: 10em;
-    background: var(--color);
+    background: var(--gradiente-fundo);
   }
   
-  label {
-    font-size: 20px;
-    font-weight: bold;
-    display: block;
-    margin: 20px 0;
+  progress[value]::-webkit-progress-value {
+    border-radius: 10em;
+    background: var(--cor-terciaria);
   }
+  
+  progress[value]::-moz-progress-bar {
+    border-radius: 10em;
+    background: var(--cor-terciaria);
+}
 
 /* ---------------------------------------------------------------------------------------------------------- Seção Formação */
 .education-section {
