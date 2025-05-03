@@ -72,7 +72,7 @@ function showSuccessPopup() {
       });
   });
 
-  const palavras = ["Desenvolvedora", "Gamer", "Leitora", "Curiosa"];
+  const palavras = ["cinéfila de sofá", "jogadora casual", "leitora apaixonada por romance criminal", "desenhista nas horas vagas", "tradutora de miados profissional"];
 let i = 0;
 let j = 0;
 let apagando = false;
