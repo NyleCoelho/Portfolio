@@ -244,7 +244,15 @@ section {
     line-height: 0.9;
     margin-bottom: 1.5rem;
     text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
 }
+
+.about-titulo.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
 .about-descricao {
     font-size: clamp(1rem, 3.5vw, 1.1rem);
@@ -276,15 +284,15 @@ section {
 }
 
 .texto_animado {
-    color: #f0e4ff;
-    font-size: clamp(1rem, 3.5vw, 1.1rem);
-    border: 1px solid #b27aff;
-    border-radius: 25px;
-    padding: 1rem;
-    margin-top: 1rem;
-    display: inline-block;
-    text-align: center;
-    max-width: 90vw;
+      color: #f0e4ff;
+      font-size: clamp(1rem, 3.5vw, 1.1rem);
+      border: 1px solid #b27aff;
+      border-radius: 25px;
+      padding: 1rem;  /* Mantém o tamanho do bloco com base no conteúdo */
+      display: block;
+      box-sizing: border-box;
+      margin-top: 2rem; 
+      width: 500px;
   }
 
 .cursor {
@@ -576,8 +584,12 @@ section {
     }
 
     .texto_animado {
+        font-size: clamp(1rem, 4vw, 1.2rem);  /* Ajusta o tamanho da fonte no mobile */
+        margin-top: 2rem;    /* Mais espaço em cima no mobile */
+        padding: 1rem 1.5rem; /* Ajuste do padding */   /* Garante que o texto seja tratado como bloco no mobile */
         text-align: center;
-        font-size: clamp(1.5rem, 2vw, 0.5rem);
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 

@@ -72,7 +72,7 @@ function showSuccessPopup() {
       });
   });
 
-  const palavras = ["cinéfila de sofá", "jogadora casual", "leitora apaixonada por romance criminal", "desenhista nas horas vagas", "tradutora de miados profissional"];
+  const palavras = ["cinéfila de sofá", "jogadora casual", "leitora ávida de romance criminal", "desenhista nas horas vagas", "tradutora de miados profissional"];
 let i = 0;
 let j = 0;
 let apagando = false;
@@ -100,3 +100,18 @@ function digita() {
 }
 
 digita();
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    } else {
+      entry.target.classList.remove('show'); // opcional: remove classe se sair da tela
+    }
+  });
+});
+
+const aboutTitulo = document.querySelector('.about-titulo');
+if (aboutTitulo) {
+  observer.observe(aboutTitulo);
+}
