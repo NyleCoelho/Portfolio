@@ -310,6 +310,14 @@ section {
     text-align: center;
 }
 
+.education-title {
+    font-family: var(--fonte-titulo);
+    font-size: clamp(4rem, 6vw, 3rem);
+    line-height: 0.9;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
 .education-content {
     max-width: 800px;
     margin: 0 auto;
