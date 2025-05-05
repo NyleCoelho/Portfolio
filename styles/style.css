@@ -301,14 +301,14 @@ section {
 .education-section {
     display: block;
     background: var(--gradiente-fundo);
-    padding: auto;
+    padding: 200px;
 }
 
 .education-title {
     font-family: var(--fonte-titulo);
     font-size: clamp(4rem, 6vw, 3rem);
     line-height: 0.9;
-    margin-bottom: 6.5rem;
+    margin-bottom: 5.5rem;
     text-align: center;
 }
 
@@ -328,7 +328,15 @@ section {
 
 .skills-container {
     display:flex;
-    justify-content: space-between;
+    gap: 10rem;
+    justify-content: center;
+}
+
+.edu-title {
+    font-size: clamp(1.8rem, 4vw, 1.25rem);
+    color: var(--cor-quaternaria);
+    padding-bottom: 2rem;
+    padding-top: 2rem;
 }
 
 .linha-vertical {
@@ -339,7 +347,6 @@ section {
 .pdf-link {
     display: inline-flex;
     justify-content: center;
-    align-items: center;
     width: 100%;
     max-width: 280px;
     padding: 1rem;
@@ -348,7 +355,7 @@ section {
     color: white;
     font-size: clamp(0.5rem, 4vw, 1.25rem);
     transition: var(--transicao-padrao);
-    margin: 0 auto;
+    margin-top: 4rem;
 }
 
 /* ---------------------------------------------------------------------------------------------------------  Seção Projetos */
