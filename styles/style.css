@@ -336,6 +336,21 @@ section {
     border-left: 2px solid rgb(255, 65, 255);/* Adiciona borda esquerda na div como ser fosse uma linha.*/
   }
 
+.pdf-link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 280px;
+    padding: 1rem;
+    border: 2px solid var(--cor-quaternaria);
+    border-radius: 40px;
+    color: white;
+    font-size: clamp(0.5rem, 4vw, 1.25rem);
+    transition: var(--transicao-padrao);
+    margin: 0 auto;
+}
+
 /* ---------------------------------------------------------------------------------------------------------  Seção Projetos */
 .projects-section {
     background: #08080a;
