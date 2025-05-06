@@ -323,7 +323,7 @@ section {
 
 .education-items, .Habilidades-container {
     width: 45%;
-    min-width: 300px; /* Evita que os blocos fiquem muito pequenos em telas pequenas */
+    min-width: 300px;
 }
 
 .skills-container {
