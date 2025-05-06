@@ -302,21 +302,21 @@ section {
     display: block;
     background: var(--gradiente-fundo);
     padding: 200px;
+    text-align: center;
 }
 
 .education-title {
     font-family: var(--fonte-titulo);
     font-size: clamp(4rem, 6vw, 3rem);
     line-height: 0.9;
-    margin-bottom: 5.5rem;
-    text-align: center;
+    margin-bottom: 2rem;
 }
 
 .education-content {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 40px;
+    gap: 0.2rem;
     flex-wrap: wrap; /* Garante responsividade em telas menores */
     text-align: left; /* Alinha o texto interno dos blocos à esquerda */
 }
@@ -339,23 +339,28 @@ section {
     padding-top: 2rem;
 }
 
+.descricao-experiencia {
+    margin-left: 1.2rem;
+    margin-top: 0.9rem;
+}
+
 .linha-vertical {
     height: 500px;/*Altura da linha*/
     border-left: 2px solid rgb(255, 65, 255);/* Adiciona borda esquerda na div como ser fosse uma linha.*/
+    margin-right: 2rem;
   }
 
 .pdf-link {
     display: inline-flex;
     justify-content: center;
-    width: 100%;
-    max-width: 280px;
-    padding: 1rem;
+    width: 80%;
+    max-width: 270px;
+    padding: 0.5rem;
     border: 2px solid var(--cor-quaternaria);
     border-radius: 40px;
     color: white;
-    font-size: clamp(0.5rem, 4vw, 1.25rem);
-    transition: var(--transicao-padrao);
-    margin-top: 4rem;
+    font-size: clamp(0.1rem, 4vw, 1.15rem);
+    margin-bottom: 2.5rem;
 }
 
 /* ---------------------------------------------------------------------------------------------------------  Seção Projetos */
