@@ -328,8 +328,21 @@ section {
 
 .skills-container {
     display:flex;
-    gap: 10rem;
-    justify-content: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid var(--cor-quaternaria);
+    border-radius: 20px;
+    color: white;
+    margin-top: 1rem;
+}
+
+.skills-title {
+    color: #da7cff;
+}
+
+.skills-list {
+    margin-left: 1rem;
 }
 
 .edu-title {
@@ -342,6 +355,10 @@ section {
 .descricao-experiencia {
     margin-left: 1.2rem;
     margin-top: 0.9rem;
+}
+
+.data-formacao {
+    color: #e562ff;
 }
 
 .linha-vertical {
@@ -361,6 +378,24 @@ section {
     color: white;
     font-size: clamp(0.1rem, 4vw, 1.15rem);
     margin-bottom: 2.5rem;
+}
+
+.faculdade-link {
+    display: inline-flex;
+    justify-content: center;
+    width: 80%;
+    max-width: 270px;
+    padding: 0.5rem;
+    border: 2px solid var(--cor-quaternaria);
+    border-radius: 40px;
+    color: white;
+    font-size: clamp(0.1rem, 4vw, 0.9rem);
+    margin-top: 2rem;
+}
+
+.faculdade-link:hover {
+    background-color: rgba(211, 136, 255, 0.247);
+    transition: var(--transicao-padrao);
 }
 
 /* ---------------------------------------------------------------------------------------------------------  Seção Projetos */
