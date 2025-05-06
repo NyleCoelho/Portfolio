@@ -403,6 +403,14 @@ section {
     background: #08080a;
 }
 
+.projects-title {
+    font-family: var(--fonte-titulo);
+    font-size: clamp(4.5rem, 6vw, 3.5rem);
+    line-height: 1;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
 .projects-content {
     max-width: 1200px;
     margin: 0 auto;
@@ -422,6 +430,11 @@ section {
     transition: var(--transicao-padrao);
     display: flex;
     flex-direction: column;
+}
+
+.project-card img {
+    height: 250px;
+    margin-bottom: 1rem;
 }
 
 .project-card:hover {
