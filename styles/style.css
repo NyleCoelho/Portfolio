@@ -409,7 +409,7 @@ section {
     align-items: center;
     gap: 1.5rem; /* Aumentei o gap entre botões e conteúdo */
     position: relative;
-    max-width: 1400px; /* Aumentei a largura máxima */
+    max-width: 1700px; /* Aumentei a largura máxima */
     margin: 0 auto;
     padding: 0 3rem; /* Aumentei o padding lateral */
 }
@@ -455,6 +455,7 @@ section {
     z-index: 1;
     width: 60px; /* Largura fixa */
     height: 60px; /* Altura fixa */
+    margin-top: 13rem;
     display: flex;
     align-items: center;
     justify-content: center;
