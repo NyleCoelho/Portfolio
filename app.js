@@ -120,20 +120,83 @@ document.addEventListener('DOMContentLoaded', () => {
   const carousel = document.querySelector('.projects-grid');
   const prevBtn = document.querySelector('.carousel-button.prev');
   const nextBtn = document.querySelector('.carousel-button.next');
-  const cardWidth = 280; // Largura do card + gap (ajuste conforme necessário)
-  let scrollPosition = 0;
+  const cards = document.querySelectorAll('.project-card');
+  
+  // Calcula a largura de um card incluindo o gap
+  const cardStyle = getComputedStyle(cards[0]);
+  const gap = parseInt(getComputedStyle(carousel).gap.replace('px', ''));
+  const cardWidth = cards[0].offsetWidth + gap;
+  
+  // Clona os cards para criar o efeito infinito
+  const cloneCards = () => {
+      // Clona os primeiros cards e adiciona no final
+      const firstCards = Array.from(cards).slice(0, 3).map(card => card.cloneNode(true));
+      firstCards.forEach(clone => carousel.appendChild(clone));
+      
+      // Clona os últimos cards e adiciona no início
+      const lastCards = Array.from(cards).slice(-3).map(card => card.cloneNode(true));
+      lastCards.reverse().forEach(clone => carousel.prepend(clone));
+  };
+  
+  cloneCards();
+  
+  let currentIndex = 3; // Começa nos cards originais (ignorando os clones iniciais)
+  let isAnimating = false;
+  const totalCards = cards.length;
 
-  nextBtn.addEventListener('click', () => {
-      scrollPosition += cardWidth;
-      if (scrollPosition > carousel.scrollWidth - carousel.clientWidth) {
-          scrollPosition = carousel.scrollWidth - carousel.clientWidth;
+  // Atualiza a posição do carrossel
+  const updateCarousel = (instant = false) => {
+      if (instant) {
+          carousel.style.transition = 'none';
+      } else {
+          carousel.style.transition = 'transform 0.5s ease-in-out';
       }
-      carousel.style.transform = `translateX(-${scrollPosition}px)`;
+      
+      carousel.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+  };
+
+  // Verifica se precisa reposicionar o carrossel
+  const checkPosition = () => {
+      // Se chegou nos clones finais, volta para os originais
+      if (currentIndex >= totalCards + 3) {
+          currentIndex = 3;
+          updateCarousel(true);
+      }
+      // Se chegou nos clones iniciais, vai para os originais no final
+      else if (currentIndex < 3) {
+          currentIndex = totalCards + 2;
+          updateCarousel(true);
+      }
+  };
+
+  // Avança para o próximo card
+  nextBtn.addEventListener('click', () => {
+      if (isAnimating) return;
+      
+      isAnimating = true;
+      currentIndex++;
+      updateCarousel();
+      
+      carousel.addEventListener('transitionend', () => {
+          isAnimating = false;
+          checkPosition();
+      }, { once: true });
   });
 
+  // Volta para o card anterior
   prevBtn.addEventListener('click', () => {
-      scrollPosition -= cardWidth;
-      if (scrollPosition < 0) scrollPosition = 0;
-      carousel.style.transform = `translateX(-${scrollPosition}px)`;
+      if (isAnimating) return;
+      
+      isAnimating = true;
+      currentIndex--;
+      updateCarousel();
+      
+      carousel.addEventListener('transitionend', () => {
+          isAnimating = false;
+          checkPosition();
+      }, { once: true });
   });
+
+  // Inicializa o carrossel
+  updateCarousel(true);
 });
