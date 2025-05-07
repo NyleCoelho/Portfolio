@@ -403,6 +403,16 @@ section {
     background: #08080a;
 }
 
+.projects-carousel {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem; /* Espaço para as setas */
+}
+
 .projects-title {
     font-family: var(--fonte-titulo);
     font-size: clamp(4.5rem, 6vw, 3.5rem);
@@ -412,15 +422,14 @@ section {
 }
 
 .projects-content {
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 100%;
+    overflow: hidden; /* Esconde os cards que estão fora da tela */
 }
 
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    display: flex; /* Mude de grid para flex */
     gap: var(--gap-medio);
-    margin-top: 2rem;
+    transition: transform 0.3s ease; /* Animação ao rolar */
 }
 
 .project-card {
@@ -428,13 +437,35 @@ section {
     padding: var(--padding-tablet);
     border-radius: 8px;
     transition: var(--transicao-padrao);
-    display: flex;
-    flex-direction: column;
+    flex: 0 0 380px; /* Largura fixa para cada card (sem crescer ou encolher) */
+    scroll-snap-align: start; /* Alinhamento suave ao rolar */
+}
+
+.carousel-button {
+    background: rgba(21, 20, 26, 0.6);
+    border: none;
+    color: var(--cor-terciaria);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: var(--transicao-padrao);
+    z-index: 1;
+}
+
+
+.carousel-button:hover {
+    background: var(--cor-quaternaria);
+    color: #08080a;
 }
 
 .project-card img {
-    height: 250px;
     margin-bottom: 1rem;
+    width: 100%;       /* Ocupa toda a largura do card */
+    height: 180px;     /* Altura fixa (ajuste conforme necessário) */
+    object-fit: cover; /* Corta a imagem para preencher o espaço */
+    object-position: center; /* Centraliza o foco do corte */
+    border-radius: 6px; /* Opcional: bordas arredondadas */
 }
 
 .project-card:hover {

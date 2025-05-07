@@ -115,3 +115,25 @@ const aboutTitulo = document.querySelector('.about-titulo');
 if (aboutTitulo) {
   observer.observe(aboutTitulo);
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const carousel = document.querySelector('.projects-grid');
+  const prevBtn = document.querySelector('.carousel-button.prev');
+  const nextBtn = document.querySelector('.carousel-button.next');
+  const cardWidth = 280; // Largura do card + gap (ajuste conforme necessário)
+  let scrollPosition = 0;
+
+  nextBtn.addEventListener('click', () => {
+      scrollPosition += cardWidth;
+      if (scrollPosition > carousel.scrollWidth - carousel.clientWidth) {
+          scrollPosition = carousel.scrollWidth - carousel.clientWidth;
+      }
+      carousel.style.transform = `translateX(-${scrollPosition}px)`;
+  });
+
+  prevBtn.addEventListener('click', () => {
+      scrollPosition -= cardWidth;
+      if (scrollPosition < 0) scrollPosition = 0;
+      carousel.style.transform = `translateX(-${scrollPosition}px)`;
+  });
+});
