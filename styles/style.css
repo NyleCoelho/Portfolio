@@ -65,7 +65,13 @@ body::after {
     pointer-events: none;
 }
 
-/* ------------------------------------------------------------------------------------------- Cabeçalho de navegação */
+.destaque {
+    color: var(--cor-quaternaria);
+    font-family: var(--fonte-texto);
+    margin-bottom: 0;
+}
+
+/* Cabeçalho de navegação */
 .cabecalho {
     position: fixed;
     top: 0;
@@ -100,7 +106,8 @@ body::after {
     transform: scale(1.2);
     outline: none;
 }
-/* ---------------------------------------------------------------------- Estilização padrão para os elementos <section> */
+
+/* Estilização padrão para os elementos <section> */
 
 section {
     padding: 6rem var(--padding-mobile);
@@ -141,12 +148,6 @@ section {
     margin-bottom: 0;
 }
 
-.hero__destaque {
-    color: var(--cor-quaternaria);
-    font-family: var(--fonte-texto);
-    margin-bottom: 0;
-}
-
 .hero__descricao {
     font-size: clamp(1rem, 3.5vw, 1.25rem);
     max-width: 80ch;
@@ -180,6 +181,7 @@ section {
     transform: translateY(-3px);
     outline: none;
 }
+
 /* ---------------------------------------------------------------------------------------------------------- Seção Sobre Mim */
 .about-section {
     background: var(--gradiente-fundo);
