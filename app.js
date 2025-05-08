@@ -116,87 +116,90 @@ if (aboutTitulo) {
   observer.observe(aboutTitulo);
 }
 
+
 document.addEventListener('DOMContentLoaded', () => {
   const carousel = document.querySelector('.projects-grid');
   const prevBtn = document.querySelector('.carousel-button.prev');
   const nextBtn = document.querySelector('.carousel-button.next');
-  const cards = document.querySelectorAll('.project-card');
-  
-  // Calcula a largura de um card incluindo o gap
-  const cardStyle = getComputedStyle(cards[0]);
-  const gap = parseInt(getComputedStyle(carousel).gap.replace('px', ''));
-  const cardWidth = cards[0].offsetWidth + gap;
-  
-  // Clona os cards para criar o efeito infinito
-  const cloneCards = () => {
-      // Clona os primeiros cards e adiciona no final
-      const firstCards = Array.from(cards).slice(0, 3).map(card => card.cloneNode(true));
-      firstCards.forEach(clone => carousel.appendChild(clone));
-      
-      // Clona os últimos cards e adiciona no início
-      const lastCards = Array.from(cards).slice(-3).map(card => card.cloneNode(true));
-      lastCards.reverse().forEach(clone => carousel.prepend(clone));
+  let cards = document.querySelectorAll('.project-card');
+
+  const getCardWidth = () => {
+    const gap = parseInt(getComputedStyle(carousel).gap.replace('px', '')) || 0;
+    return cards[0].offsetWidth + gap;
   };
-  
-  cloneCards();
-  
-  let currentIndex = 3; // Começa nos cards originais (ignorando os clones iniciais)
+
+  let cardWidth = getCardWidth();
+  let currentIndex = 0;
   let isAnimating = false;
-  const totalCards = cards.length;
 
-  // Atualiza a posição do carrossel
+  // Clona os cards para efeito infinito
+  const cloneCards = () => {
+    const isMobile = window.innerWidth <= 768;
+    const cloneCount = isMobile ? 1 : 3;
+    
+    const firstClones = Array.from(cards).slice(0, cloneCount).map(card => card.cloneNode(true));
+    const lastClones = Array.from(cards).slice(-cloneCount).map(card => card.cloneNode(true));
+
+    firstClones.forEach(clone => carousel.appendChild(clone));
+    lastClones.reverse().forEach(clone => carousel.prepend(clone));
+
+    // Atualiza a lista de cards e o índice inicial
+    cards = document.querySelectorAll('.project-card');
+    currentIndex = cloneCount;
+  };
+
+  cloneCards();
+
   const updateCarousel = (instant = false) => {
-      if (instant) {
-          carousel.style.transition = 'none';
-      } else {
-          carousel.style.transition = 'transform 0.5s ease-in-out';
-      }
-      
-      carousel.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+    if (instant) {
+      carousel.style.transition = 'none';
+    } else {
+      carousel.style.transition = 'transform 0.5s ease-in-out';
+    }
+
+    cardWidth = getCardWidth(); // Recalcula dinamicamente
+    carousel.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
   };
 
-  // Verifica se precisa reposicionar o carrossel
   const checkPosition = () => {
-      // Se chegou nos clones finais, volta para os originais
-      if (currentIndex >= totalCards + 3) {
-          currentIndex = 3;
-          updateCarousel(true);
-      }
-      // Se chegou nos clones iniciais, vai para os originais no final
-      else if (currentIndex < 3) {
-          currentIndex = totalCards + 2;
-          updateCarousel(true);
-      }
+    const cloneCount = window.innerWidth <= 768 ? 1 : 3;
+    const totalOriginalCards = cards.length - (cloneCount * 2);
+
+    if (currentIndex >= totalOriginalCards + cloneCount) {
+      currentIndex = cloneCount;
+      updateCarousel(true);
+    } else if (currentIndex < cloneCount) {
+      currentIndex = totalOriginalCards + cloneCount - 1;
+      updateCarousel(true);
+    }
   };
 
-  // Avança para o próximo card
   nextBtn.addEventListener('click', () => {
-      if (isAnimating) return;
-      
-      isAnimating = true;
-      currentIndex++;
-      updateCarousel();
-      
-      carousel.addEventListener('transitionend', () => {
-          isAnimating = false;
-          checkPosition();
-      }, { once: true });
+    if (isAnimating) return;
+    isAnimating = true;
+    currentIndex++;
+    updateCarousel();
+    carousel.addEventListener('transitionend', () => {
+      isAnimating = false;
+      checkPosition();
+    }, { once: true });
   });
 
-  // Volta para o card anterior
   prevBtn.addEventListener('click', () => {
-      if (isAnimating) return;
-      
-      isAnimating = true;
-      currentIndex--;
-      updateCarousel();
-      
-      carousel.addEventListener('transitionend', () => {
-          isAnimating = false;
-          checkPosition();
-      }, { once: true });
+    if (isAnimating) return;
+    isAnimating = true;
+    currentIndex--;
+    updateCarousel();
+    carousel.addEventListener('transitionend', () => {
+      isAnimating = false;
+      checkPosition();
+    }, { once: true });
   });
 
-  // Inicializa o carrossel
+  window.addEventListener('resize', () => {
+    cardWidth = getCardWidth();
+    updateCarousel(true);
+  });
+
   updateCarousel(true);
 });
