@@ -25,7 +25,7 @@
     --gap-grande: 2rem;
 }
 
-/* ==================== RESET & BASE STYLES ==================== */
+/* ==================== RESET & ESTILOS BASE ==================== */
 .destaque {
     color: var(--cor-quaternaria);
     font-family: var(--fonte-texto);
@@ -56,7 +56,7 @@ body {
     position: relative;
 }
 
-/* ==================== HEADER ==================== */
+/* ==================== CABEÇALHO ==================== */
 .cabecalho {
     position: fixed;
     top: 0;
@@ -92,7 +92,7 @@ body {
     outline: none;
 }
 
-/* ==================== SECTIONS ==================== */
+/* ==================== SEÇÕES ==================== */
 section {
     padding: 6rem var(--padding-mobile);
     min-height: 100vh;
@@ -101,7 +101,7 @@ section {
     scroll-margin-top: 80px;
 }
 
-/* ==================== HERO SECTION ==================== */
+/* ==================== SEÇÃO PRINCIPAL ==================== */
 .hero {
     background: var(--gradiente-fundo);
     position: relative;
@@ -166,7 +166,7 @@ section {
     outline: none;
 }
 
-/* ==================== ABOUT SECTION ==================== */
+/* ==================== SEÇÃO SOBRE MIM ==================== */
 .sobremim {
     background: var(--gradiente-fundo);
 }
@@ -233,7 +233,7 @@ section {
     border-radius: 25px;
 }
 
-/* ==================== EDUCATION SECTION ==================== */
+/* ==================== SEÇÃO FORMAÇÃO PROFISSIONAL ==================== */
 .formacao {
     display: block;
     background: var(--gradiente-fundo);
@@ -334,7 +334,7 @@ section {
     transition: var(--transicao-padrao);
 }
 
-/* ==================== PROJECTS SECTION ==================== */
+/* ==================== SEÇÃO DE PORTFÓLIO ==================== */
 .projetos {
     background: #08080a;
     padding: 3rem 0;
@@ -450,7 +450,7 @@ section {
     transform: translateX(5px);
 }
 
-/* ==================== CONTACT SECTION ==================== */
+/* ==================== SEÇÃO DE CONTATO  ==================== */
 .contato {
     background: #08080A;
 }
@@ -572,7 +572,7 @@ section {
     font-size: clamp(0.8rem, 3vw, 1rem);
 }
 
-/* ==================== POPUP ==================== */
+/* ==================== POPUPS DE SUCESSO E ERRO NO FORMULÁRIO ==================== */
 .contato-popup {
     display: none;
     position: fixed;
@@ -652,7 +652,8 @@ section {
 }
 
 /* ==================== MEDIA QUERIES ==================== */
-/* Tablet */
+
+/* TABLETS */
 @media (min-width: 768px) {
     .container {
         padding: 0 var(--padding-tablet);
@@ -689,7 +690,7 @@ section {
     }
 }
 
-/* Mobile */
+/* MOBILE */
 @media (max-width: 767px) {
     .hero-descricao {
         font-size: clamp(0.8rem, 3vw, 1rem);
@@ -849,7 +850,7 @@ section {
     }
 }
 
-/* Desktop */
+/* DESKTOP */
 @media (min-width: 1024px) {
     .container {
         padding: 0 var(--padding-desktop);
@@ -873,7 +874,7 @@ section {
     }
 }
 
-/* Large Screens */
+/* TELAS GRANDES */
 @media (min-width: 1600px) {
     .container {
         max-width: 1400px;
