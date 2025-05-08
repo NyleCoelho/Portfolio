@@ -16,7 +16,7 @@ function enviarFormulario(event) {
 }
 
 // Adiciona o evento ao formulário
-const formulario = document.querySelector(".contact-form");
+const formulario = document.querySelector(".contato__formulario");
 if (formulario) {
   formulario.addEventListener("submit", enviarFormulario);
 }
@@ -59,7 +59,7 @@ function showSuccessPopup() {
   });
   
   // Modifique o evento de submit do formulário
-  document.querySelector('.contact-form').addEventListener('submit', function(e) {
+  document.querySelector('.contato__formulario').addEventListener('submit', function(e) {
     e.preventDefault();
     
     emailjs.sendForm("gmail_portfolio_bianca", "template_huq2ijn", this)

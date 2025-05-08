@@ -455,11 +455,11 @@ section {
 }
 
 /* ---------------------------------------------------------------------------------------------------------- Seção Contato */
-.contact-section {
+.contato {
     background: #08080A;
 }
 
-.contato_titulo {
+.contato__titulo {
     font-family: var(--fonte-titulo);
     font-size: clamp(4.5rem, 7vw, 4rem);
     text-align: center;
@@ -473,32 +473,32 @@ section {
     font-size: clamp(5.5rem, 7vw, 4rem);
 }
 
-.contact-content {
+.contato__conteudo {
     max-width: 600px;
     margin: 0 auto;
     width: 100%;
 }
 
-.contact-form {
+.contato__formulario {
     display: flex;
     flex-direction: column;
     gap: var(--gap-medio);
     margin-top: 2rem;
 }
 
-.form-group {
+.contato__formulario-grupo {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
 }
 
-.form-group label {
+.contato__formulario-grupo label {
     font-weight: 600;
     font-size: clamp(0.9rem, 3vw, 1rem);
 }
 
-.form-group input,
-.form-group textarea {
+.contato__formulario-grupo input,
+.contato__formulario-grupo textarea {
     padding: 0.8rem;
     background: rgba(21, 20, 26, 0.6);
     border: 1px solid rgba(159, 86, 255, 0.3);
@@ -508,19 +508,19 @@ section {
     font-size: clamp(0.9rem, 3vw, 1rem);
 }
 
-.form-group textarea {
+.contato__formulario-grupo textarea {
     min-height: 120px;
     resize: vertical;
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
+.contato__formulario-grupo input:focus,
+.contato__formulario-grupo textarea:focus {
     outline: none;
     border-color: var(--cor-terciaria);
     box-shadow: 0 0 0 2px rgba(159, 86, 255, 0.2);
 }
 
-.submit-btn {
+.formulario__botao-enviar {
     padding: 1rem;
     background: var(--cor-terciaria);
     color: white;
@@ -533,12 +533,12 @@ section {
     margin-top: 0.5rem;
 }
 
-.submit-btn:hover {
+.formulario__botao-enviar:hover {
     background: var(--cor-quaternaria);
     transform: translateY(-2px);
 }
 
-.social-links {
+.formulario__links {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -546,7 +546,7 @@ section {
     margin-top: 3rem;
 }
 
-.social-link {
+.formulario__link {
     color: var(--cor-secundaria);
     font-weight: 600;
     font-size: clamp(0.9rem, 3vw, 1rem);
@@ -554,7 +554,7 @@ section {
     padding: 0.5rem;
 }
 
-.social-link:hover {
+.formulario__link:hover {
     color: var(--cor-terciaria);
 }
 
@@ -776,7 +776,7 @@ section {
         right: 0.25rem;
       }
 
-      .contact-content {
+      .contato__conteudo {
         width: 350px;
       }
 
