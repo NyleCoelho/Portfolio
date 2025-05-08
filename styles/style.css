@@ -86,15 +86,15 @@ body::after {
     padding: 0 var(--padding-mobile);
 }
 
-/* Cabeçalho */
+/* --- Cabeçalho de navegação --- */
 .cabecalho {
-    padding: 1rem var(--padding-mobile);
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    backdrop-filter: blur(10px);
     z-index: 100;
+    padding: 1rem var(--padding-mobile);
+    backdrop-filter: blur(10px);
     transition: padding 0.3s ease;
 }
 
@@ -110,9 +110,9 @@ body::after {
     color: var(--cor-secundaria);
     font-size: clamp(1rem, 4vw, 1.5rem);
     font-weight: 600;
-    transition: var(--transicao-padrao);
     text-decoration: none;
     padding: 0.5rem;
+    transition: var(--transicao-padrao);
 }
 
 .menu__item a:hover,
