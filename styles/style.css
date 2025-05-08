@@ -788,40 +788,37 @@ section {
     }
 
     .projects-section {
-        padding: 4rem 1rem 2rem 1rem; /* Aumenta espaço pro título */
+        padding: 3rem 0.5rem 1.5rem 0.5rem;
       }
     
       .projects-title {
-        font-size: 2.5rem;
-        margin-bottom: 2rem;
-        text-align: center;
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
       }
     
       .projects-carousel {
-        flex-direction: column;
-        padding: 0 1rem;
-        overflow: hidden; /* Impede qualquer scroll */
-        max-width: 100%;
+        padding: 0 0.5rem;
+        overflow: hidden; /* Mantém o overflow hidden */
       }
     
       .projects-grid {
         display: flex;
-        transition: transform 0.3s ease;
-        gap: 2rem;
-        width: 100%;
-        overflow: hidden; /* Importante para sumir com o scroll */
+        transition: transform 0.5s ease-in-out !important; /* Garante a transição para o JS */
+        gap: 1rem; /* Reduz o gap entre os cards */
+        width: auto; /* A largura será determinada pelo número de cards * largura de cada card */
       }
     
       .project-card {
-        flex: 0 0 100%; /* Mostra apenas um card por vez */
+        flex: 0 0 100%; /* Cada card ocupa 100% da largura do pai */
         max-width: 100%;
         min-height: auto;
       }
     
       .carousel-button {
-        width: 40px;
-        height: 40px;
-        font-size: 1.5rem;
+        /* Mantenha ou ajuste a exibição dos botões no mobile conforme desejar */
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -830,11 +827,19 @@ section {
       }
     
       .carousel-button:first-of-type {
-        left: 0.5rem;
+        left: 0.25rem;
       }
     
       .carousel-button:last-of-type {
-        right: 0.5rem;
+        right: 0.25rem;
+      }
+
+      .contact-content {
+        width: 350px;
+      }
+
+      .destaque_contato {
+        font-size: 4.5rem;
       }
 }
 
