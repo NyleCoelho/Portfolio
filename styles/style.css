@@ -768,18 +768,18 @@ section {
     
     .education-content {
         display: flex;
-        flex-direction: column; /* Empilha tudo em mobile */
-        gap: 2rem; /* Espaço entre elementos */
+        flex-direction: column; 
+        gap: 2rem; 
         max-width: 1200px;
         margin: 0 auto;
     }
     
     .education-items, .Habilidades-container {
-        width: 100%; /* Ocupa toda a largura */
+        width: 100%; 
     }
     
     .linha-vertical {
-        display: none; /* Remove a linha em mobile */
+        display: none; 
     }
 
     .skills-container {
@@ -798,24 +798,23 @@ section {
     
       .projects-carousel {
         padding: 0 0.5rem;
-        overflow: hidden; /* Mantém o overflow hidden */
+        overflow: hidden;
       }
     
       .projects-grid {
         display: flex;
-        transition: transform 0.5s ease-in-out !important; /* Garante a transição para o JS */
-        gap: 1rem; /* Reduz o gap entre os cards */
-        width: auto; /* A largura será determinada pelo número de cards * largura de cada card */
+        transition: transform 0.5s ease-in-out !important; 
+        gap: 1rem; 
+        width: auto; 
       }
     
       .project-card {
-        flex: 0 0 100%; /* Cada card ocupa 100% da largura do pai */
+        flex: 0 0 100%; 
         max-width: 100%;
         min-height: auto;
       }
     
       .carousel-button {
-        /* Mantenha ou ajuste a exibição dos botões no mobile conforme desejar */
         width: 30px;
         height: 30px;
         font-size: 1rem;
