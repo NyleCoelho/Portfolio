@@ -118,10 +118,10 @@ if (aboutTitulo) {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-  const carousel = document.querySelector('.projects-grid');
-  const prevBtn = document.querySelector('.carousel-button.prev');
-  const nextBtn = document.querySelector('.carousel-button.next');
-  let cards = document.querySelectorAll('.project-card');
+  const carousel = document.querySelector('.projetos__grid');
+  const prevBtn = document.querySelector('.botao-carrossel.prev');
+  const nextBtn = document.querySelector('.botao-carrossel.next');
+  let cards = document.querySelectorAll('.projetos__card');
 
   const getCardWidth = () => {
     const gap = parseInt(getComputedStyle(carousel).gap.replace('px', '')) || 0;
@@ -144,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
     lastClones.reverse().forEach(clone => carousel.prepend(clone));
 
     // Atualiza a lista de cards e o índice inicial
-    cards = document.querySelectorAll('.project-card');
+    cards = document.querySelectorAll('.projetos__card');
     currentIndex = cloneCount;
   };
 
