@@ -1,8 +1,8 @@
 @font-face {
-    font-family: "Tex Gyre Italic Bold"; /* Nome que você vai usar no CSS */
+    font-family: "Tex Gyre Italic Bold"; 
     src: url("../fonts/tex-gyre-termes.bold-italic.otf") format("opentype");
-    font-weight: normal; /* Ajuste se necessário (bold, 700, etc.) */
-    font-style: normal; /* Pode ser "italic" se for o caso */
+    font-weight: normal; 
+    font-style: normal; 
 }
 
 :root {
@@ -17,7 +17,6 @@
     --gradiente-fundo: radial-gradient(circle at right, #08080a, #07060c);
     --transicao-padrao: all 0.3s ease-in-out;
     
-    /* Novas variáveis para responsividade */
     --padding-mobile: 1rem;
     --padding-tablet: 1.5rem;
     --padding-desktop: 2rem;
@@ -26,7 +25,15 @@
     --gap-grande: 2rem;
 } 
 
-/* Reset e estilos base */
+
+/* ============================ Estruturas padronizadas + reset de estilos  ============================ */
+
+.destaque {
+    color: var(--cor-quaternaria);
+    font-family: var(--fonte-texto);
+    margin-bottom: 0;
+}
+
 *,
 *::before,
 *::after {
@@ -51,27 +58,8 @@ body {
     position: relative;
 }
 
-/* Camada da imagem */
-body::after {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('../assets/1123121.png') center center/cover no-repeat;
-    opacity: 0.15;
-    z-index: -1;
-    pointer-events: none;
-}
+/* ============================ Cabeçalho de navegação ============================ */
 
-.destaque {
-    color: var(--cor-quaternaria);
-    font-family: var(--fonte-texto);
-    margin-bottom: 0;
-}
-
-/* Cabeçalho de navegação */
 .cabecalho {
     position: fixed;
     top: 0;
@@ -107,7 +95,7 @@ body::after {
     outline: none;
 }
 
-/* Estilização padrão para os elementos <section> */
+/* ============================ Estilização padrão para os elementos <section> ============================ */
 
 section {
     padding: 6rem var(--padding-mobile);
@@ -117,7 +105,7 @@ section {
     scroll-margin-top: 80px; /* Espaço fixo para o cabeçalho*/
 }
 
-/* ---------------------------------------------------------------------------------------------------------- Seção Hero */
+/* ============================ Seção Hero ============================ */
 .hero {
     background: var(--gradiente-fundo);
     position: relative;
@@ -182,7 +170,7 @@ section {
     outline: none;
 }
 
-/* ---------------------------------------------------------------------------------------------------------- Seção Sobre Mim */
+/* ============================ Seção Sobre Mim ============================ */
 .sobremim {
     background: var(--gradiente-fundo);
 }
@@ -223,7 +211,7 @@ section {
 }
 
 .sobremim__imagem img {
-    display: block; /* Garante que a imagem ocupe o espaço corretamente */
+    display: block;
     width: 100%;
     max-height: 600px;
     object-fit: cover;
@@ -243,28 +231,28 @@ section {
     max-width: 500px;
     margin-top: 2rem;
     padding: 1rem;
-    color: #f0e4ff;
+    color: var(--cor-primaria);
     font-size: clamp(1rem, 3.5vw, 1.1rem);
     border: 1px solid #b27aff;
     border-radius: 25px;
 }
   
-/* ---------------------------------------------------------------------------------------------------------- Seção Formação */
-.education-section {
+/* ============================ Seção formação profissional ============================ */
+.formacao {
     display: block;
     background: var(--gradiente-fundo);
     padding: 200px;
     text-align: center;
 }
 
-.education-title {
+.formacao__titulo {
     font-family: var(--fonte-titulo);
     font-size: clamp(4rem, 6vw, 3rem);
     line-height: 0.9;
     margin-bottom: 2rem;
 }
 
-.education-content {
+.formacao__conteudo {
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -273,12 +261,12 @@ section {
     text-align: left; /* Alinha o texto interno dos blocos à esquerda */
 }
 
-.education-items, .Habilidades-container {
+.formacao__coluna, .formacao__coluna {
     width: 45%;
     min-width: 300px;
 }
 
-.skills-container {
+.formacao__conteiner-habilidades {
     display:flex;
     justify-content: space-between;
     width: 100%;
@@ -289,22 +277,22 @@ section {
     margin-top: 1rem;
 }
 
-.skills-title {
+.formacao__titulo-habilidade {
     color: #da7cff;
 }
 
-.skills-list {
+.formacao__lista-habilidades {
     margin-left: 1rem;
 }
 
-.edu-title {
+.formacao__subtitulo {
     font-size: clamp(1.8rem, 4vw, 1.25rem);
     color: var(--cor-quaternaria);
     padding-bottom: 2rem;
     padding-top: 2rem;
 }
 
-.descricao-experiencia {
+.formacao__descricao {
     margin-left: 1.2rem;
     margin-top: 0.9rem;
 }
@@ -664,7 +652,7 @@ section {
         font-size: clamp(0.9rem, 4vw, 0.6rem); 
     }
 
-    .skills-container {
+    .formacao__conteiner-habilidades {
         flex-direction: row; /* Volta para linha */
         justify-content: space-between;
     }
@@ -685,39 +673,43 @@ section {
         width: 15rem;
     }
 
-    .education-section {
+    .formacao {
         display: block;
         background: var(--gradiente-fundo);
         padding: 4rem 1.5rem; /* Padding menor para mobile */
         text-align: center;
     }
 
-    .education-title {
+    .formacao__titulo {
         font-size: clamp(3rem, 2vw, 0.2rem); 
     }
 
-    .edu-title {
+    .formacao__subtitulo {
         font-size: clamp(1.5rem, 2vw, 0.2rem); 
     }
 
-    .institution {
+    .formacao__instituicao {
         font-size: clamp(0.9rem, 2vw, 0.2rem);
 
     }
 
-    .titulo-edu-item {
-        font-size: clamp(0.9rem, 2vw, 0.2rem);
+    .formacao__coluna-habilidades {
+        padding: 20px;
+    }
+
+    .formacao__titulo-experiencia {
+        font-size: clamp(1rem, 2vw, 0.2rem);
     }
 
     .data-formacao {
         font-size: clamp(0.5rem, 2vw, 0.2rem); 
     }
 
-    .descricao-experiencia {
+    .formacao__descricao {
         width: 87%;
     }
     
-    .education-content {
+    .formacao__conteudo {
         display: flex;
         flex-direction: column; 
         gap: 2rem; 
@@ -725,7 +717,7 @@ section {
         margin: 0 auto;
     }
     
-    .education-items, .Habilidades-container {
+    .formacao__coluna, .formacao__coluna {
         width: 100%; 
     }
     
@@ -733,7 +725,7 @@ section {
         display: none; 
     }
 
-    .skills-container {
+    .formacao__conteiner-habilidades {
         display: block;
         line-height: 20px;
     }
