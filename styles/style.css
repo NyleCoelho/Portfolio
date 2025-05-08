@@ -189,7 +189,7 @@ section {
 
 .sobremim__conteudo {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     align-items: center;
     gap: var(--gap-grande);
     max-width: 1200px;
@@ -202,11 +202,9 @@ section {
 }
 
 .sobremim__titulo {
-    font-family: var(--fonte-titulo);
-    font-size: clamp(4rem, 6vw, 3rem);
-    line-height: 0.9;
-    margin-bottom: 1.5rem;
+    font: 600 clamp(3rem, 6vw, 4rem) / 0.9 var(--fonte-titulo);
     text-align: center;
+    margin-bottom: 1.5rem;
 }
 
 .sobremim__descricao {
@@ -217,16 +215,16 @@ section {
 }
 
 .sobremim__imagem {
-    width: 100%;
-    max-width: 800px;
+    order: -1;
     display: flex;
     justify-content: center;
-    order: -1;
+    width: 100%;
+    max-width: 800px;
 }
 
 .sobremim__imagem img {
+    display: block; /* Garante que a imagem ocupe o espaço corretamente */
     width: 100%;
-    height: auto;
     max-height: 600px;
     object-fit: cover;
     border-radius: 16px;
@@ -239,17 +237,17 @@ section {
 }
 
 .texto_animado {
-      color: #f0e4ff;
-      font-size: clamp(1rem, 3.5vw, 1.1rem);
-      border: 1px solid #b27aff;
-      border-radius: 25px;
-      padding: 1rem;  /* Mantém o tamanho do bloco com base no conteúdo */
-      display: block;
-      box-sizing: border-box;
-      margin-top: 2rem; 
-      width: 100%;
-    max-width: 500px; /* Limita a largura máxima */
-  }
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 500px;
+    margin-top: 2rem;
+    padding: 1rem;
+    color: #f0e4ff;
+    font-size: clamp(1rem, 3.5vw, 1.1rem);
+    border: 1px solid #b27aff;
+    border-radius: 25px;
+}
   
 /* ---------------------------------------------------------------------------------------------------------- Seção Formação */
 .education-section {
