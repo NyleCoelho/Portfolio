@@ -22,8 +22,8 @@ if (formulario) {
 }
 
 // Funções para controlar os pop-ups
-function showSuccessPopup() {
-    const popup = document.getElementById('successPopup');
+function showsucessoPopup() {
+    const popup = document.getElementById('sucessoPopup');
     popup.style.display = 'flex';
     
     // Fecha automaticamente após 4 segundos
@@ -32,9 +32,9 @@ function showSuccessPopup() {
     }, 4000);
   }
   
-  function showErrorPopup(error) {
-    const popup = document.getElementById('errorPopup');
-    const messageElement = popup.querySelector('.popup-message');
+  function showerroPopup(error) {
+    const popup = document.getElementById('erroPopup');
+    const messageElement = popup.querySelector('.popup__mensagem');
     
     // Mensagem de erro personalizada
     messageElement.textContent = error || 'Houve um problema ao enviar sua mensagem. Tente novamente.';
@@ -42,15 +42,15 @@ function showSuccessPopup() {
   }
   
   // Fechar pop-ups ao clicar no botão ou fora do conteúdo
-  document.querySelectorAll('.popup-close-btn').forEach(btn => {
+  document.querySelectorAll('.popup__botaofechar').forEach(btn => {
     btn.addEventListener('click', () => {
-      document.querySelectorAll('.custom-popup').forEach(popup => {
+      document.querySelectorAll('.erroPopup').forEach(popup => {
         popup.style.display = 'none';
       });
     });
   });
   
-  document.querySelectorAll('.custom-popup').forEach(popup => {
+  document.querySelectorAll('.contato-popup').forEach(popup => {
     popup.addEventListener('click', (e) => {
       if (e.target === popup) {
         popup.style.display = 'none';
@@ -64,11 +64,11 @@ function showSuccessPopup() {
     
     emailjs.sendForm("gmail_portfolio_bianca", "template_huq2ijn", this)
       .then(() => {
-        showSuccessPopup();
+        showsucessoPopup();
         this.reset(); // Limpa o formulário
       })
       .catch((error) => {
-        showErrorPopup(error.text);
+        showerroPopup(error.text);
       });
   });
 

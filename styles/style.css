@@ -817,7 +817,7 @@ section {
 }
 
 /* Estilos do Pop-up */
-.custom-popup {
+.contato-popup {
     display: none;
     position: fixed;
     top: 0;
@@ -831,7 +831,7 @@ section {
     animation: fadeIn 0.3s;
   }
   
-  .popup-content {
+  .popup__conteudo {
     background: #30333f;
     padding: 30px;
     border-radius: 12px;
@@ -842,34 +842,34 @@ section {
     position: relative;
   }
   
-  .popup-content.error {
+  .popup__conteudo.error {
     border-top: 4px solid #e03a87;
   }
   
-  .popup-icon {
+  .popup__icone {
     font-size: 50px;
     color: #d754ff;
     margin-bottom: 15px;
     font-weight: bold;
   }
   
-  .popup-content.error .popup-icon {
+  .popup__conteudo.error .popup__icone {
     color: #e74c3c;
   }
   
-  .popup-title {
+  .popup__titulo {
     color: #da7cff;
     margin-bottom: 10px;
     font-size: 1.5em;
   }
   
-  .popup-message {
+  .popup__mensagem {
     color: #fcecff;
     margin-bottom: 20px;
     line-height: 1.5;
   }
   
-  .popup-close-btn {
+  .popup__botaofechar {
     background-color: #b34ef7;
     color: white;
     border: none;
@@ -881,11 +881,11 @@ section {
     margin-top: 10px;
   }
   
-  .popup-content.error .popup-close-btn {
+  .popup__conteudo.error .popup__botaofechar {
     background-color: #e64997;
   }
   
-  .popup-close-btn:hover {
+  .popup__botaofechar:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
