@@ -111,7 +111,7 @@ const observer = new IntersectionObserver((entries) => {
   });
 });
 
-const aboutTitulo = document.querySelector('.about-titulo');
+const aboutTitulo = document.querySelector('.sobremim__titulo');
 if (aboutTitulo) {
   observer.observe(aboutTitulo);
 }

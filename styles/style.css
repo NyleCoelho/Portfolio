@@ -183,11 +183,11 @@ section {
 }
 
 /* ---------------------------------------------------------------------------------------------------------- Seção Sobre Mim */
-.about-section {
+.sobremim {
     background: var(--gradiente-fundo);
 }
 
-.about-content {
+.sobremim__conteudo {
     display: flex;
     flex-direction:column;
     align-items: center;
@@ -196,35 +196,27 @@ section {
     margin: 0 auto;
 }
 
-.about-text {
+.sobremim__texto {
     width: 100%;
     max-width: 800px;
 }
 
-.about-titulo {
+.sobremim__titulo {
     font-family: var(--fonte-titulo);
     font-size: clamp(4rem, 6vw, 3rem);
     line-height: 0.9;
     margin-bottom: 1.5rem;
     text-align: center;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-.about-titulo.show {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-.about-descricao {
+.sobremim__descricao {
     font-size: clamp(1rem, 3.5vw, 1.1rem);
     line-height: 1.6;
     text-align: center;
     margin-top: 2rem;
 }
 
-.about-image {
+.sobremim__imagem {
     width: 100%;
     max-width: 800px;
     display: flex;
@@ -232,7 +224,7 @@ section {
     order: -1;
 }
 
-.about-image img {
+.sobremim__imagem img {
     width: 100%;
     height: auto;
     max-height: 600px;
@@ -242,7 +234,7 @@ section {
     transition: transform 0.3s ease;
 }
 
-.about-image img:hover {
+.sobremim__imagem img:hover {
     transform: scale(1.03);
 }
 
@@ -257,15 +249,6 @@ section {
       margin-top: 2rem; 
       width: 100%;
     max-width: 500px; /* Limita a largura máxima */
-  }
-
-.cursor {
-    animation: pisca 1s infinite;
-  }
-  
-  @keyframes pisca {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
   }
   
 /* ---------------------------------------------------------------------------------------------------------- Seção Formação */
@@ -626,17 +609,17 @@ section {
         padding: 8rem var(--padding-tablet);
     }
     
-    .about-content {
+    .sobremim__conteudo {
         flex-direction: row;
         text-align: left;
     }
     
-    .about-titulo,
-    .about-descricao {
+    .sobremim__titulo,
+    .sobremim__descricao {
         text-align: left;
     }
     
-    .about-image {
+    .sobremim__imagem {
         order: 0;
     }
     
@@ -667,17 +650,17 @@ section {
         font-size: clamp(0.6rem, 2vw, 0.1rem);
     }
 
-    .about-image img {
+    .sobremim__imagem img {
         width: 80%;
         height: 300px;
         margin-bottom: 40px;
     }
 
-    .about-titulo {
+    .sobremim__titulo {
         font-size: clamp(2.7rem, 4vw, 0.6rem); 
     }
 
-    .about-descricao {
+    .sobremim__descricao {
         margin: 2.5rem auto 2rem;
         padding: 1.2rem;
         font-size: clamp(0.9rem, 4vw, 0.6rem); 
@@ -826,7 +809,7 @@ section {
         padding: 10rem var(--padding-desktop);
     }
     
-    .about-content {
+    .sobremim__conteudo {
         gap: 4rem;
     }
     
