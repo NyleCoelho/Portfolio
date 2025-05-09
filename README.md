@@ -1,3 +1,5 @@
+![(banner)](assets/imgrepresentativa.png)<br>
+
 # 🌐 Currículo Virtual
 
 Este é um projeto que desenvolvi como parte dos meus estudos, com o objetivo de criar um **currículo virtual** usando as tecnologias base da web: **HTML**, **CSS** e **JavaScript puro** — ou seja, sem bibliotecas ou frameworks externos.
