@@ -329,7 +329,7 @@ section {
     margin-top: 2rem;
 }
 
-.faculdade-link:hover {
+.faculdade-link:hover, .pdf-link:hover {
     background-color: rgba(211, 136, 255, 0.247);
     transition: var(--transicao-padrao);
 }
