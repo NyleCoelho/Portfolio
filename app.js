@@ -72,7 +72,7 @@ function mostrarPopupSucesso() {
       });
   });
 
-  const listaDePalavras = ["cinéfila de sofá", "jogadora casual", "leitora ávida de romance criminal", "desenhista nas horas vagas", "tradutora de miados profissional"];
+  const listaDePalavras = ["mãe de pet!", "fanática por desenhos animados!", "leitora ávida!", "desenhista nas horas vagas!", "uma excelente escolha para sua empresa!"];
   let indicePalavra = 0;
   let indiceLetra = 0;
   let estaApagando = false;
