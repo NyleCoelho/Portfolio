@@ -23,8 +23,7 @@ Decidi não usar bibliotecas externas para focar no aprendizado das bases. Desen
 
 ## ✅ Resultado final
 
-Fico feliz com o resultado! Espero que esse projeto mostre um pouco do que sou capaz de construir com dedicação e vontade de aprender.  
-Se quiser dar uma olhada e deixar um feedback, vou adorar! 🙂
+Fico feliz com o resultado! Espero que esse projeto mostre um pouco do que sou capaz de construir com dedicação e vontade de aprender. Se quiser dar uma olhada e deixar um feedback, vou adorar! 🙂
 
 
 
